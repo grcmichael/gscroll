@@ -1,6 +1,6 @@
 {
   "name": "@grcmichael/gscroll",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Simple smooth scroll based on GSAP library",
   "main": "index.js",
   "scripts": {
