@@ -4,7 +4,7 @@ Pretty basic smooth scroll based on [GSAP](https://greensock.com/) library (1ko 
 If you’re using GSAP on your project, you can use this package to simply add a smooth scroll.  
 It is basically [ScrollTrigger](https://greensock.com/scrolltrigger/) free but if you plan to use ScrollTrigger, you can use GScroll as a setter of the current distance scrolled.
 
-## Live demos :
+## Live demos
 [GSAP + GScroll](http://zert.fr)    
 [GSAP + ScrollTrigger + GScroll](http://zert.fr)
 
@@ -13,7 +13,7 @@ It is basically [ScrollTrigger](https://greensock.com/scrolltrigger/) free but i
 $ npm i @grcmichael/gscroll
 ```
 
-## Declaration :
+## Declaration
 ```js
 import gsap from "gsap"
 import GScroll from "@grcmichael/gscroll"
@@ -24,14 +24,14 @@ scroll.init()
 scroll.wheel()
 ```
 
-## Constructor :
+## Constructor
 ```js
 GScroll( element: String, speed: Float )
 ```
 element — DOM element that will translate.  
 speed — Speed of the scroll, must be superior to 0. Default is 0.6.
 
-## Methods :
+## Methods
 `init()` initializes the scroll
 
 `wheel()` add the wheel event listener (the scroll is now active)
@@ -44,5 +44,5 @@ speed — Speed of the scroll, must be superior to 0. Default is 0.6.
 
 `destroy()` kills everything
 
-## They use GScroll : 
+## They use GScroll
 [anagram.club](https://anagram.club)
