@@ -1,0 +1,18 @@
+{
+  "name": "@grcmichael/gscroll",
+  "version": "1.0.0",
+  "description": "Simple smooth scroll based on GSAP library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "smooth",
+    "scroll",
+    "gsap",
+    "smoothscroll",
+    "gscroll"
+  ],
+  "author": "Michaël Garcia <garciamichaeljean@gmail.com> (https://michaelg.fr)",
+  "license": "ISC"
+}
