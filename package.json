@@ -14,5 +14,8 @@
     "gscroll"
   ],
   "author": "Michaël Garcia <garciamichaeljean@gmail.com> (https://michaelg.fr)",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "gsap": "^3.6.1"
+  }
 }
