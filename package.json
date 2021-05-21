@@ -11,7 +11,8 @@
     "scroll",
     "gsap",
     "smoothscroll",
-    "gscroll"
+    "gscroll",
+    "smooth-scroll"
   ],
   "author": "Michaël Garcia <garciamichaeljean@gmail.com> (https://michaelg.fr)",
   "license": "ISC",
