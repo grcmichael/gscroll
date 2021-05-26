@@ -4,10 +4,6 @@ Pretty basic smooth scroll based on [GSAP](https://greensock.com/) library (1ko 
 If you’re using GSAP on your project, you can use this package to simply add a smooth scroll.  
 It is basically [ScrollTrigger](https://greensock.com/scrolltrigger/) free but if you plan to use ScrollTrigger, you can use GScroll as a setter of the current distance scrolled.
 
-## Live demos
-[GSAP + GScroll](http://zert.fr)    
-[GSAP + ScrollTrigger + GScroll](http://zert.fr)
-
 ## Install 
 ```
 $ npm i @grcmichael/gscroll
