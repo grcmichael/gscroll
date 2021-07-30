@@ -2,12 +2,13 @@ import gsap from "gsap";
 
 export default class GScroll
 {
-	constructor (elmt, speed)
+	constructor (elmt, speed, onUpdate = () => true)
 	{	
 		this.speed = speed/10 || 0.06;
 		this.elmt = elmt;
 		this.isWheeling = null;
 		this.deltaY = 0;
+		this.update = onUpdate;
 	}
 
 	init ()
@@ -68,6 +69,8 @@ export default class GScroll
 
         this.current += (-this.scrollTop - this.current) * dt;
         this.deplacement(this.current);
+
+        this.update();
     }
 
 	destroy()
