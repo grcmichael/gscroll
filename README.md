@@ -25,8 +25,8 @@ scroll.wheel()
 GScroll( element: String, speed: Float, onUpdate: function )
 ```
 element — DOM element that will translate.  
-speed — Optionla — Speed of the scroll, must be superior to 0. Default is 0.6.
-onUpdate — Contains code that will be read when the smooth scroll is running.  
+speed (optional) — Speed of the scroll, must be superior to 0. Default is 0.6.  
+onUpdate (optional) — Contains code that will be read when GScroll is running.
 
 ## Methods
 `init()` initializes the scroll
@@ -42,4 +42,5 @@ onUpdate — Contains code that will be read when the smooth scroll is running.
 `destroy()` kills everything
 
 ## They use GScroll
+[benjaminrighetti.com](https://benjaminrighetti.com/)
 [anagram.club](https://anagram.club)
