@@ -22,10 +22,11 @@ scroll.wheel()
 
 ## Constructor
 ```js
-GScroll( element: String, speed: Float )
+GScroll( element: String, speed: Float, onUpdate: function )
 ```
 element — DOM element that will translate.  
-speed — Speed of the scroll, must be superior to 0. Default is 0.6.
+speed — Optionla — Speed of the scroll, must be superior to 0. Default is 0.6.
+onUpdate — Contains code that will be read when the smooth scroll is running.  
 
 ## Methods
 `init()` initializes the scroll
