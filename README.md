@@ -42,5 +42,5 @@ onUpdate (optional) — Contains code that will be read when GScroll is running.
 `destroy()` kills everything
 
 ## They use GScroll
-[benjaminrighetti.com](https://benjaminrighetti.com/)
+[benjaminrighetti.com](https://benjaminrighetti.com/)  
 [anagram.club](https://anagram.club)
