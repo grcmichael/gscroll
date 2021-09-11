@@ -61,16 +61,16 @@ export default class GScroll
 
 		if(this.scrollTop + this.deltaY > this.height){
 			this.scrollTop = this.height;
-        }else if(this.scrollTop + this.deltaY < 0){
-        	this.scrollTop = 0;
-        }else if(this.deltaY !== 0){
-        	this.scrollTop += this.deltaY;
-        }
+		}else if(this.scrollTop + this.deltaY < 0){
+			this.scrollTop = 0;
+		}else if(this.deltaY !== 0){
+			this.scrollTop += this.deltaY;
+		}
 
-        this.current += (-this.scrollTop - this.current) * dt;
-        this.deplacement(this.current);
-
-        this.update();
+		this.current += (-this.scrollTop - this.current) * dt;
+		this.deplacement(this.current);
+		
+		this.update();
     }
 
 	destroy()
