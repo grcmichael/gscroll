@@ -67,8 +67,11 @@ export default class GScroll
 			this.scrollTop += this.deltaY;
 		}
 
-		this.current += (-this.scrollTop - this.current) * dt;
-		this.deplacement(this.current);
+		const diff = -this.scrollTop - this.current;
+        if(Math.round(100*diff)/100 != 0){
+        	this.current += diff * dt;
+        	this.deplacement(this.current);
+        }
 		
 		this.update();
     }
