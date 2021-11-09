@@ -41,6 +41,11 @@ onUpdate (optional) — Contains code that will be read when GScroll is running.
 
 `destroy()` kills everything
 
+## Live examples
+Basic utilisation: [GSAP + GScroll](https://codepen.io/michaelgrc/pen/WNEyjLv)  
+Complete utilisation: [GSAP + ScrollTrigger + GScroll](https://codepen.io/michaelgrc/pen/LYjrzEy)  
+
+
 ## They use GScroll
 [benjaminrighetti.com](https://benjaminrighetti.com/)  
 [anagram.club](https://anagram.club)  
