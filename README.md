@@ -9,15 +9,30 @@ It is basically [ScrollTrigger](https://greensock.com/scrolltrigger/) free but i
 $ npm i @grcmichael/gscroll
 ```
 
+
+
+## Start 
+##### install the package
+```
+$ npm install
+$ npm run dev
+
+// with vite
+```
+
+
+
+
 ## Declaration
 ```js
 import gsap from "gsap"
 import GScroll from "@grcmichael/gscroll"
   
-const scroll = new GScroll( "#scroll-section" )
+const scroll = new GScroll({
+    el: "#GScroll",
+    speed: 0.5
+});
 
-scroll.init()
-scroll.wheel()
 ```
 
 ## Constructor
