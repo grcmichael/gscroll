@@ -4,7 +4,9 @@
   "description": "Simple smooth scroll based on GSAP library",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
   },
   "keywords": [
     "smooth",
@@ -16,7 +18,10 @@
   ],
   "author": "Michaël Garcia <garciamichaeljean@gmail.com> (https://michaelg.fr)",
   "license": "ISC",
+  "devDependencies": {
+    "vite": "^2.6.4"
+  },
   "dependencies": {
-    "gsap": "^3.6.1"
+    "gsap": "^3.8.0"
   }
 }
