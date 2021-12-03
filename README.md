@@ -28,10 +28,11 @@ $ npm run dev
 import gsap from "gsap"
 import GScroll from "@grcmichael/gscroll"
   
-const scroll = new GScroll( "#scroll-section" )
+const scroll = new GScroll({
+    el: "#GScroll",
+    speed: 0.5
+});
 
-scroll.init()
-scroll.wheel()
 ```
 
 ## Constructor

@@ -1,8 +1,7 @@
 import gsap from "gsap";
 
+
 class GScroll {
-
-
 	constructor(option = {}) {
 		this.option = {
 			el: option.el,
@@ -12,7 +11,7 @@ class GScroll {
 			update: option.onUpdate,
 		};
 		this.init();
-		this.wheel(); // Now  need to manually init and wheel ✌️
+		this.wheel();
 	}
 
 
@@ -30,8 +29,7 @@ class GScroll {
 
 
 	playTicker() {
-		const dt =
-			1.0 - Math.pow(1.0 - this.option.speed, gsap.ticker.deltaRatio());
+		const dt = 1.0 - Math.pow(1.0 - this.option.speed, gsap.ticker.deltaRatio());
 
 		if (this.scrollTop + this.option.deltaY > this.height) {
 			this.scrollTop = this.height;
@@ -46,22 +44,19 @@ class GScroll {
 			this.current += diff * dt;
 			this.deplacement(this.current);
 		}
-
 		this.option.update();
 	}
 
 
 
 	wheel() {
-		window.addEventListener(
-			"wheel",
-			(this.ref = (e) => {
-				this.option.deltaY = e.deltaY;
-				window.clearTimeout(this.option.isWheeling);
-				this.option.isWheeling = setTimeout((e) => {
-					this.option.deltaY = 0;
-				}, 66);
-			})
+		window.addEventListener("wheel", (this.ref = (e) => {
+			this.option.deltaY = e.deltaY;
+			window.clearTimeout(this.option.isWheeling);
+			this.option.isWheeling = setTimeout((e) => {
+				this.option.deltaY = 0;
+			}, 66);
+		})
 		);
 	}
 
@@ -92,7 +87,7 @@ class GScroll {
 	}
 
 
-	
+
 	destroy() {
 		gsap.killTweensOf(this.option.el);
 		window.removeEventListener("wheel", this.ref);
