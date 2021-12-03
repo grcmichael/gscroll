@@ -1,10 +1,7 @@
 import gsap from "gsap";
 
 class GScroll {
-	
-	/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-						 Constructor 🥼
-	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
 
 	constructor(option = {}) {
 		this.option = {
@@ -18,29 +15,23 @@ class GScroll {
 		this.wheel(); // Now  need to manually init and wheel ✌️
 	}
 
-	
-	/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-							   init
-	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
 
 	init() {
 		this.current = this.scrollTop = 0;
-		this.height =  document.querySelector(this.option.el).clientHeight - window.innerHeight;
+		this.height =
+			document.querySelector(this.option.el).clientHeight - window.innerHeight;
 		this.deplacement = gsap.quickSetter(this.option.el, "y", "px");
 		this.addTicker = () => this.playTicker();
 		gsap.ticker.add(this.addTicker);
 		gsap.set("body", { overflow: "hidden" }); //  it'll disable default scroll
 	}
 
-	
-	
-	/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-						   Ticker 💚
-	  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
 
 	playTicker() {
-		const dt = 1.0 - Math.pow(1.0 - this.option.speed, gsap.ticker.deltaRatio());
-
+		const dt =
+			1.0 - Math.pow(1.0 - this.option.speed, gsap.ticker.deltaRatio());
 
 		if (this.scrollTop + this.option.deltaY > this.height) {
 			this.scrollTop = this.height;
@@ -49,7 +40,6 @@ class GScroll {
 		} else if (this.option.deltaY !== 0) {
 			this.scrollTop += this.option.deltaY;
 		}
-
 
 		const diff = -this.scrollTop - this.current;
 		if (Math.round(100 * diff) / 100 != 0) {
@@ -61,10 +51,6 @@ class GScroll {
 	}
 
 
-
-	/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-							   Wheel 🖱️
-	  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 	wheel() {
 		window.addEventListener(
@@ -79,16 +65,13 @@ class GScroll {
 		);
 	}
 
+
+
 	unwheel() {
 		window.removeEventListener("wheel", this.ref);
 	}
 
 
-
-
-	/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-							  Resize
-	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 	resize() {
 		this.height =
@@ -96,13 +79,6 @@ class GScroll {
 	}
 
 
-
-
-
-
-	/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-						Scroll to🤙
-	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 	scrollTo(section, dur) {
 		const duration = dur || 1;
@@ -115,10 +91,8 @@ class GScroll {
 		});
 	}
 
-	/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-						   Destroy GScroll  🚮
-	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
+	
 	destroy() {
 		gsap.killTweensOf(this.option.el);
 		window.removeEventListener("wheel", this.ref);
@@ -126,9 +100,6 @@ class GScroll {
 	}
 }
 
-
-
 export { GScroll };
-
 
 // vite causing issue so export like this
